@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "Krawchuk#3",
+    password: "password", // provide your own password!
     database: "bamazon",
 });
 
@@ -44,17 +44,12 @@ Use if "inquirer" for the App to ask questions:
 var cart = function () {
     inquirer.prompt([{
         name: "ProductID",
-        type: "input",
+        type: "list",
         message: "What is the ID of the product you would like to buy?",
+        choices: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
-        // Validattion: it checks weather or not the user typed a response
-        validate: function (value) {
-            if (isNaN(value) == false) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        // Validation: it checks weather or not the user typed a response
+
     }, {
         name: "Quantity",
         type: "input",
@@ -65,6 +60,7 @@ var cart = function () {
             } else {
                 return false;
             }
+
         }
     }]).then(function (answer) {
 
@@ -107,7 +103,7 @@ var cart = function () {
                 });
 
             } else {
-                console.log("\n Sorry there is not enough of this product in stock. Come back later...\n");
+                console.log("\n Sorry there is not enough of this product in stock. Check stock available now or come back later...\n");
                 console.log('\n ***************************** ONEGAISHIMASU *****************************\n');
             }
 
