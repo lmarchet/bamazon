@@ -1,0 +1,25 @@
+{
+  "name": "Homework_bamazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bamazonCustomer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmarchet/bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmarchet/bamazon/issues"
+  },
+  "homepage": "https://github.com/lmarchet/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^6.0.0",
+    "mysql": "^2.11.1"
+  }
+}
